@@ -1,10 +1,10 @@
 //person class
 
 public class Person {
-        private int id;
-        private String name;
-        private int age;
-        private final boolean parentPermission;
+        int id;
+         String name="unknown";
+         int age;
+         boolean parentPermission = true;
 
     public  Person(String name, int age, boolean parentPermission) {
 
@@ -12,11 +12,6 @@ public class Person {
             this.age = age;
             this.parentPermission = parentPermission;
         }
-
-        public Person(String namint age) {
-            this( "unknown", age, true);
-        }
-
         public int getId() {
             return id;
         }
