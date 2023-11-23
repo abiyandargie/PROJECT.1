@@ -4,7 +4,7 @@ public class Teacher extends Person {
 
     public Teacher(String name, int age, String specialization) {
         super(name, age);
-         this.specialization = specialization;
+        this.specialization = specialization;
     }
 
     public String getSpecialization() {
