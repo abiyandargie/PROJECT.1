@@ -1,6 +1,10 @@
+ 
 //person class
 import java.util.ArrayList;
 import java.util.List;
+ 
+ 
+ 
 public class Person implements Nameable {
     int id;
     String name;
@@ -15,6 +19,25 @@ public class Person implements Nameable {
         this.rentals = new ArrayList<>();
     }
 
+   
+ 
+public class Person {
+        int id;
+         String name="unknown";
+         int age;
+         boolean parentPermission = true;
+
+    public  Person(String name, int age, boolean parentPermission) {
+
+            this.name = name;
+            this.age = age;
+            this.parentPermission = parentPermission;
+        }
+        public int getId() {
+            return id;
+        }
+ 
+ 
     public int getId() {
         return id;
     }

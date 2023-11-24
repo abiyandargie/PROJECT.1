@@ -1,4 +1,4 @@
-//teacher class
+//teacher class extends person class
 public class Teacher extends Person {
     private String specialization;
 
