@@ -1,3 +1,4 @@
+ 
 public class Teacher extends Person {
     private String specialization;
     private boolean parent_permission = true;
