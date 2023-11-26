@@ -1,4 +1,4 @@
-public class BaseDecorator implements Nameable {
+public class Decorator implements Nameable {
     protected Nameable nameable;
 
     public BaseDecorator(Nameable nameable) {
