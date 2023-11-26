@@ -19,6 +19,7 @@ public class Classroom {
         this.label = label;
     }
 
+
     // Relationship methods for students
     public List<Student> getStudents() {
         return students;
@@ -26,6 +27,6 @@ public class Classroom {
 
     public void addStudent(Student student) {
         students.add(student);
-        student.setClassroom(this);
+        students.setClassroom(this);
     }
 }

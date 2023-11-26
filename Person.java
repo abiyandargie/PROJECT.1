@@ -1,17 +1,17 @@
 public class Person implements Nameable {
-     public int id;
-     String name;
-      int age;
+    private String id;
+    private String name;
+    private int age;
 
-   static boolean parent_permission;
+    private boolean parent_permission;
 
-    public Person(int id, String name, boolean parent_permission) {
+    public Person(String id, String name, boolean parent_permission) {
         this.id = id;
         this.name = name;
         this.parent_permission = parent_permission;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -41,13 +41,5 @@ public class Person implements Nameable {
 
     public String correct_name() {
         return name;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void addRental() {
-        this.addRental();
     }
 }

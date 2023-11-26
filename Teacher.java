@@ -1,9 +1,9 @@
 public class Teacher extends Person {
-     String specialization;
-     boolean parent_permission = true;
+    private String specialization;
+    private boolean parent_permission = true;
 
-    public Teacher(int id, String name, boolean parent_permission, String specialization) {
-        super(Integer.parseInt(String.valueOf(id)), name, parent_permission);
+    public Teacher(String id, String name, boolean parent_permission, String specialization) {
+        super(id, name, parent_permission);
         this.specialization = specialization;
     }
 

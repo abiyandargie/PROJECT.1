@@ -1,16 +1,15 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person(12,"mengaw");
-        System.out.println(person.correctName());
+        Person person = new Person("NSR/1666/14", "mengaw wubetu", false);
+        System.out.println(person.correct_name());
 
         CapitalizeDecorator capitalizedPerson = new CapitalizeDecorator(person);
-        System.out.println(capitalizedPerson.correctName());
+        System.out.println(capitalizedPerson.correct_name());
 
-        TrimmerDecorator trimmedPerson = new TrimmerDecorator(person);
-        System.out.println(trimmedPerson.correctName());
-
-        CapitalizeDecorator capitalizedAndTrimmedPerson = new CapitalizeDecorator(new TrimmerDecorator(person));
-        System.out.println(capitalizedAndTrimmedPerson.correctName());
+        TrimmerDecorator capitalizedTrimmedPerson = new TrimmerDecorator(capitalizedPerson);
+        System.out.println(capitalizedTrimmedPerson.correct_name());
     }
+
 }

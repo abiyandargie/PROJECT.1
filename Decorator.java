@@ -1,7 +1,7 @@
-public class Decorator implements Nameable {
+public class BaseDecorator implements Nameable {
     protected Nameable nameable;
 
-    public Decorator(Nameable nameable) {
+    public BaseDecorator(Nameable nameable) {
         this.nameable = nameable;
     }
 
