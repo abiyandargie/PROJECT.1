@@ -1,3 +1,3 @@
 public interface Nameable {
-    String correctName();
+    String correct_name();
 }

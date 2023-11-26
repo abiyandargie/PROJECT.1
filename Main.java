@@ -1,7 +1,7 @@
-//main class
+
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person("John Doe", 24);
+        Person person = new Person(12,"mengaw");
         System.out.println(person.correctName());
 
         CapitalizeDecorator capitalizedPerson = new CapitalizeDecorator(person);

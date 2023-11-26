@@ -1,18 +1,13 @@
-//teacher class
 public class Teacher extends Person {
-    private String specialization;
+     String specialization;
+     boolean parent_permission = true;
 
-    public Teacher(String name, int age, String specialization) {
-        super(name, age);
+    public Teacher(int id, String name, boolean parent_permission, String specialization) {
+        super(Integer.parseInt(String.valueOf(id)), name, parent_permission);
         this.specialization = specialization;
     }
 
-    public String getSpecialization() {
-        return specialization;
-    }
-
-    @Override
-    public boolean canUseServices() {
+    public boolean can_use_services() {
         return true;
     }
 }

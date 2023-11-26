@@ -2,14 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
-    private String title;
-    private String author;
-    private List<Rental> rentals;
+    String title;
+    String author;
+    List<Rental> rentals;
+    private String isbn;
 
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
-        this.rentals = new ArrayList<>();
+        rentals = new ArrayList<>();
     }
 
     public String getTitle() {
@@ -34,5 +35,10 @@ public class Book {
 
     public void addRental(Rental rental) {
         rentals.add(rental);
+        rental.setBook(this);
+    }
+
+    public String getIsbn() {
+        return isbn;
     }
 }
