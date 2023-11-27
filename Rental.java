@@ -4,12 +4,8 @@ public class Rental {
     private Book book;
     private Person person;
 
-    public Rental(String date, Book book, Person person) {
+    public Rental(String date) {
         this.date = date;
-        this.book = book;
-        this.person = person;
-        book.addRental(this);
-        person.addRental(this);
     }
 
     public String getDate() {
@@ -24,7 +20,17 @@ public class Rental {
         return book;
     }
 
+    public void setBook(Book book) {
+        this.book = book;
+        book.addRental(this);
+    }
+
     public Person getPerson() {
         return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+        person.addRental(this);
     }
 }

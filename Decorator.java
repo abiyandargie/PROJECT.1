@@ -1,15 +1,11 @@
-public abstract class Decorator implements Nameable {
+public class Decorator implements Nameable {
     protected Nameable nameable;
 
-    public Decorator(Nameable nameable) {
-
+    public BaseDecorator(Nameable nameable) {
         this.nameable = nameable;
     }
 
-    @Override
-    public String correctName() {
-
-            return nameable.correctName();
-        }
+    public String correct_name() {
+        return nameable.correct_name();
     }
-
+}

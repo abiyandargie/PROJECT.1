@@ -1,24 +1,26 @@
  
+ 
 //person class
 import java.util.ArrayList;
 import java.util.List;
  
  
- 
+  
 public class Person implements Nameable {
-    int id;
-    String name;
-    int age;
-    boolean parentPermission;
-    List<Rental> rentals;
+    private String id;
+    private String name;
+    private int age;
 
-    public Person(String name, int age) {
+    private boolean parent_permission;
+
+    public Person(String id, String name, boolean parent_permission) {
+        this.id = id;
         this.name = name;
-        this.age = age;
-        this.parentPermission = true;
-        this.rentals = new ArrayList<>();
+        this.parent_permission = parent_permission;
     }
-
+ 
+    public String getId() {
+ 
    
  
 public class Person {
@@ -39,6 +41,7 @@ public class Person {
  
  
     public int getId() {
+ 
         return id;
     }
 
@@ -58,24 +61,15 @@ public class Person {
         this.age = age;
     }
 
-    private boolean isOfAge() {
+    private boolean of_age() {
         return age >= 18;
     }
 
-    public boolean canUseServices() {
-        return isOfAge() || parentPermission;
+    public boolean can_use_services() {
+        return of_age() || parent_permission;
     }
 
-    @Override
-    public String correctName() {
+    public String correct_name() {
         return name;
-    }
-
-    public List<Rental> getRentals() {
-        return rentals;
-    }
-
-    public void addRental(Rental rental) {
-        rentals.add(rental);
     }
 }

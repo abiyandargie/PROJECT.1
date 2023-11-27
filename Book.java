@@ -9,12 +9,13 @@ public class Book {
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
-        this.rentals = new ArrayList<>();
+        rentals = new ArrayList<>();
     }
 
     public String getTitle() {
         return title;
     }
+    
 
     public void setTitle(String title) {
         this.title = title;
@@ -34,5 +35,6 @@ public class Book {
 
     public void addRental(Rental rental) {
         rentals.add(rental);
+        rental.setBook(this);
     }
 }
