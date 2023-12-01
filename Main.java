@@ -1,53 +1,50 @@
 import java.util.Scanner;
 
-public class Main{
+public class Main {
     public static void main(String[] args) {
+        App app = new App();
         Scanner scanner = new Scanner(System.in);
-        int choice;
 
-        do {
-            System.out.println("Options:");
+        while (true) {
+            System.out.println("Welcome to the School Library App!");
+            System.out.println("Choose an option:");
             System.out.println("1. List all books");
             System.out.println("2. List all people");
-            System.out.println("3. Create a student");
-            System.out.println("4. Create a teacher");
-            System.out.println("5. Create a book");
-            System.out.println("6. Create a rental");
-            System.out.println("7. List rentals for a person ID");
-            System.out.println("0. Quit");
+            System.out.println("3. Create a person");
+            System.out.println("4. Create a book");
+            System.out.println("5. Create a rental");
+            System.out.println("6. List rentals by person ID");
+            System.out.println("7. Quit app");
+            System.out.print("Enter option: ");
+            int option = scanner.nextInt();
+            scanner.nextLine(); // Consume newline character
 
-            System.out.print("Enter your choice: ");
-            choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
-
-            switch (choice) {
+            switch (option) {
                 case 1:
-                    listAllBooks();
+
+                    app.listAllBooks();
                     break;
                 case 2:
-                    listAllPeople();
+                    app.listAllPeople();
                     break;
                 case 3:
-                    createStudent();
+                    app.createPerson();
                     break;
                 case 4:
-                    createTeacher();
+                    app.createBook();
                     break;
                 case 5:
-                    createBook();
+                    app.createRental();
                     break;
                 case 6:
-                    createRental();
+                    app.listRentalsByPersonId();
                     break;
                 case 7:
-                    listRentalsForPerson();
-                    break;
-                case 0:
-                    System.out.println("Quitting the app...");
+                    app.quitApp();
                     break;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Invalid option. Please try again.");
             }
-        } while (choice != 0);
+        }
     }
 }

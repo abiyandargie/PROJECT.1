@@ -1,4 +1,4 @@
-public class TrimmerDecorator extends BaseDecorator {
+public class TrimmerDecorator extends  Decorator {
     public TrimmerDecorator(Nameable nameable) {
         super(nameable);
     }

@@ -1,36 +1,46 @@
-
 public class Rental {
-    private String date;
-    private Book book;
-    private Person person;
+    // Date of the rental
+    int date;
 
-    public Rental(String date) {
+    // Book associated with the rental
+    Book book;
+
+    // Person who rented the book
+    Person person;
+
+    // Constructor for Rental class
+    public Rental(int date, Book book, Person person) {
         this.date = date;
+        this.book = book;
+        this.person = person;
+
+
+        book.addRental(this);
+        person.addRental();
     }
 
-    public String getDate() {
+    // Getter for date
+    public int getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    // Setter for date
+    public void setDate(int date) {
         this.date = date;
     }
 
+    // Getter for associated book
     public Book getBook() {
         return book;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
-        book.addRental(this);
-    }
-
+    // Getter for the person who rented the book
     public Person getPerson() {
         return person;
     }
 
-    public void setPerson(Person person) {
-        this.person = person;
-        person.addRental(this);
+
+    public void setBook(Book book) {
+        this.book=book;
     }
 }

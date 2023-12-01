@@ -2,20 +2,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
-    private String title;
-    private String author;
-    private List<Rental> rentals;
+    String title;
+    String author;
+    List<Rental> rentals;
+    private String Isbn;
 
-    public Book(String title, String author) {
+    public Book(String title, String author,String Isbn) {
         this.title = title;
         this.author = author;
         rentals = new ArrayList<>();
+        this.Isbn=Isbn;
+
     }
+
+    public void setIsbn(String isbn) {
+        Isbn = isbn;
+    }
+
 
     public String getTitle() {
         return title;
     }
-    
 
     public void setTitle(String title) {
         this.title = title;
@@ -36,5 +43,9 @@ public class Book {
     public void addRental(Rental rental) {
         rentals.add(rental);
         rental.setBook(this);
+    }
+
+    public String getIsbn() {
+        return Isbn;
     }
 }
