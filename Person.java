@@ -25,13 +25,7 @@ public class Person implements Nameable {
         return age;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public boolean of_age() {
         return age >= 18;
@@ -41,9 +35,7 @@ public class Person implements Nameable {
         return of_age() || parent_permission;
     }
 
-    public String correct_name() {
-        return name;
-    }
+
 
     public void setId(int id) {
         this.id = id;
