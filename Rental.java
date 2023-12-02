@@ -24,10 +24,7 @@ public class Rental {
         return date;
     }
 
-    // Setter for date
-    public void setDate(int date) {
-        this.date = date;
-    }
+
 
     // Getter for associated book
     public Book getBook() {
