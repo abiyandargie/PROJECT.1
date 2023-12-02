@@ -1,4 +1,4 @@
-public class Person implements Nameable {
+public class Person  {
      public int id;
      String name;
       int age;
@@ -27,13 +27,6 @@ public class Person implements Nameable {
 
 
 
-    public boolean of_age() {
-        return age >= 18;
-    }
-
-    public boolean can_use_services() {
-        return of_age() || parent_permission;
-    }
 
 
 
