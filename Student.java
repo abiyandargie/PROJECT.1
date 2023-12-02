@@ -6,10 +6,4 @@ public class Student extends Person {
         this.classroom = classroom;
     }
 
-    public Student(String id, String name, boolean parentPermission,int age) {
-        super(Integer.parseInt(id),name,parentPermission,age );
-    }
-
-    public void setClassroom(Classroom classroom) {
-    }
-}
+   
