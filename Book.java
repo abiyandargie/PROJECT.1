@@ -1,16 +1,16 @@
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class Book {
-    String title;
-    String author;
-    List<Rental> rentals;
+   private String title;
+  private String author;
+
     final private String Isbn;
 
     public Book(String title, String author,String Isbn) {
-        this.title = title;
-        this.author = author;
-        rentals = new ArrayList<>();
+        this.title =title.toUpperCase();
+        this.author = author.toUpperCase();
+
         this.Isbn=Isbn;
 
     }
@@ -25,10 +25,7 @@ public class Book {
         return author;
     }
 
-    public void addRental(Rental rental) {
-        rentals.add(rental);
-        rental.setBook(this);
-    }
+
 
     public String getIsbn() {
         return Isbn;

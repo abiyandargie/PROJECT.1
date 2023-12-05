@@ -1,15 +1,29 @@
-public class Person  {
-     public int id;
-     String name;
-      int age;
 
-   static boolean parent_permission;
 
-    public Person(int id, String name, boolean parent_permission,int age) {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Person {
+    public int id;
+    String name;
+    int age;
+
+    static boolean parent_permission;
+
+
+    public Person(int id,boolean parent_permission,String name ,int age) {
         this.id = id;
-        this.name = name;
+      name=name.toUpperCase();
+        if(name.length()>10){
+            this.name=name.substring(0,10);
+        }
+
+        else {
+            this.name = name;
+        }
         this.parent_permission = parent_permission;
-        this.age=age;
+        this.age = age;
+
     }
 
     public int getId() {
@@ -21,20 +35,12 @@ public class Person  {
     }
 
     public int getAge() {
-
         return age;
     }
 
-
-
-
-
-
     public void setId(int id) {
         this.id = id;
-    }
+    }}
 
-    public void addRental() {
-        this.addRental();
-    }
-}
+
+

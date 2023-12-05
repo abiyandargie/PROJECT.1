@@ -14,17 +14,13 @@ public class Rental {
         this.book = book;
         this.person = person;
 
-
-        book.addRental(this);
-        person.addRental();
+//        book.addRental(this);
+//        person.addRental(this);  // Pass the current rental to the addRental method
     }
-
     // Getter for date
     public int getDate() {
         return date;
     }
-
-
 
     // Getter for associated book
     public Book getBook() {
@@ -36,8 +32,8 @@ public class Rental {
         return person;
     }
 
-
-    public void setBook(Book book) {
-        this.book=book;
-    }
+//    public void setBook(Book book) {
+//        this.book = book;
+//    }
 }
+
