@@ -1,53 +1,52 @@
 import java.util.Scanner;
-
-public class Main{
+import static java.lang.System.*;
+public class Main {
     public static void main(String[] args) {
+        App app = new App();
         Scanner scanner = new Scanner(System.in);
-        int choice;
 
-        do {
-            System.out.println("Options:");
-            System.out.println("1. List all books");
-            System.out.println("2. List all people");
-            System.out.println("3. Create a student");
-            System.out.println("4. Create a teacher");
-            System.out.println("5. Create a book");
-            System.out.println("6. Create a rental");
-            System.out.println("7. List rentals for a person ID");
-            System.out.println("0. Quit");
+        while (true) {
+             out.println("Welcome to the School Library App!");
+         out.println("===================================================================");
+           out.println("=====Choose an option:                                            ");
+            out.println("=====>1. Create books                                            ");
+            out.println("=====>2. List all books                                            ");
+            out.println("=====>3. Create a person                                           ");
+             out.println("=====>4. List all people                                           ");
+           out.println("=====>5. Create a rental                                         ");
+            out.println("=====>6. List rentals by person ID                              ");
+            out.println("=====>7. Quit app                                                ");
+            out.println("=====Enter option:                                           ");
+           out.print("=====================================================================\n\n");
+            int option = scanner.nextInt();
 
-            System.out.print("Enter your choice: ");
-            choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
-
-            switch (choice) {
+            scanner.nextLine(); // Consume newline character
+            switch (option) {
                 case 1:
-                    listAllBooks();
+                    app.createBook();
+
                     break;
                 case 2:
-                    listAllPeople();
+                    app.listAllBooks();
                     break;
                 case 3:
-                    createStudent();
+                    app.createPerson();
                     break;
                 case 4:
-                    createTeacher();
+                    app.listAllPeople();
                     break;
                 case 5:
-                    createBook();
+                    app.createRental();
                     break;
                 case 6:
-                    createRental();
+                    app.listRentalsByPersonId();
                     break;
                 case 7:
-                    listRentalsForPerson();
-                    break;
-                case 0:
-                    System.out.println("Quitting the app...");
+                    app.quitApp();
                     break;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+              out.println("Invalid option. Please try again....");
             }
-        } while (choice != 0);
+        }
     }
 }

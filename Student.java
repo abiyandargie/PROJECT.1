@@ -1,8 +1,10 @@
 public class Student extends Person {
-    private String classroom;
-    
-    public Student(String id, String name, boolean parent_permission, String classroom) {
-        super(id, name, parent_permission);
+    String classroom;
+
+    public Student(int id, String name, boolean parent_permission, String classroom, int age) {
+        super(id,parent_permission,name,age);
         this.classroom = classroom;
     }
 }
+
+   
